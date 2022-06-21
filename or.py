@@ -7,14 +7,14 @@ def main(df, modelName, plotName, eta, epochs):
     X,y = X_y_split(df)
     print(f"X:  {X.shape}\ny:  {y.shape}")
 
-    model_or = Perceptron(eta=eta, epochs=epochs)
-    model_or.fit(X, y)
+    model = Perceptron(eta=eta, epochs=epochs)
+    model.fit(X, y)
 
-    _ = model_or.total_loss()
+    _ = model.total_loss()
 
-    model_or.save(file_name=modelName)
+    model.save(file_name=modelName)
 
-    save_plot(df=df, model=model_or, filename=plotName)
+    save_plot(df=df, model=model, filename=plotName)
 
 
 if __name__ == "__main__":
