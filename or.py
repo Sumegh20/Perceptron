@@ -41,7 +41,7 @@ if __name__ == "__main__":
     try:
         logging.info(f"_____START TRANING_____  {gate}")
         main(df=OR, modelName="or.model", plotName="or.png", eta=ETA, epochs=EPOCHS)
-        logging.info(f'_____DONE TRANING_____  {gate}\n')
+        logging.info(f'_____DONE TRANING_____  {gate}\n\n')
     except Exception as e:
         logging.exception(e)
         raise e
