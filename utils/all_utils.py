@@ -8,6 +8,13 @@ import logging
 plt.style.use("fivethirtyeight")
 
 def X_y_split(df, target_col='y'):
+    """it returns label and independent features
+    Args:
+        df (pd.DataFrame): This is a dataframe
+        target_col (str, optional): label col name. Defaults to "y".
+    Returns:
+        tuple: label and x
+    """
     logging.info("Split the dataset into X and y")
     X = df.drop(target_col, axis=1)
     y = df[target_col]
